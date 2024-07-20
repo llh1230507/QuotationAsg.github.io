@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VAT Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <style>
+    /* Add your custom styles here */
+  </style>
+</head>
+<body>
+<!-- Rest of your code -->
+
+
+
+<!-- Bootstrap Dropdown -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+  Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <li><a class="dropdown-item" href="#" onclick="addItem('Action')">Action</a></li>
+  <li><a class="dropdown-item" href="#" onclick="addItem('Another action')">Another action</a></li>
+  <li><a class="dropdown-item" href="#" onclick="addItem('Something else here')">Something else here</a></li>
+  </ul>
+</div>
+
+<!-- Table to store selected items -->
+<table id="selectedItemsTable" class="table">
+  <thead>
+  <tr>
+    <th scope="col">Selected Items</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script>
+  function addItem(item) {
+  var table = document.getElementById("selectedItemsTable");
+  var row = table.insertRow(-1);
+  var cell = row.insertCell(0);
+  cell.innerHTML = item;
+  console.log(item);
+  }
+</script>
+
+</body>
+</html>
